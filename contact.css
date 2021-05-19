@@ -16,6 +16,7 @@
 .footer { 
     grid-area: footer; 
     background-color: #c1d798;
+    padding: 0 10px 0 10px;
 }
 
 .grid-container {
