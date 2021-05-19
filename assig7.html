@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<title>Assignment 7</title>
+<meta charset="utf-8">
+<meta name="description" content="Forms to Fill Out">
+<!--see external stylesheet for css-->
+<link rel="stylesheet" href="assig7.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Assignment 7 - working with forms</h1>
+<form name="myform" class="form1" action="#" method="post">
+    <div>
+        <label for="firstname">First Name</label>
+        <input type="text" required name="firstname" id="firstname" size="75" maxlength="15">
+        <label for="lastname">Last Name</label>
+        <input type="text" name="lastname" id="lastname" size="75" maxlength="25">
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age" min="18" max="65">
+        <label for="email">Email</label> 
+        <input type="email" required name="email" id="email" size="75">
+        <label for="date">Date of your Membership</label>
+        <input type="date" name="date" id="date" max="2021-12-31" size="75">
+        <label for="reward">Choose your reward</label>
+        <input type="text" name="reward" id="reward" list="rewards" size="75">
+            <datalist id="rewards">
+                <option value="Two-year Member Magazine subscription"></option>
+                <option value="2 Tickets to Annual Seminar"></option>
+                <option value="Voucher $100 food during seminar"></option>
+                <option value="1-day hotel stay for seminar"></option>
+            </datalist>
+        <br>
+        <input type="submit" value="Submit"> &nbsp; <input type="reset" value="Clear">
+    </div>
+</form>
+<h2>Return to <a href="assignments.html">Assignments Page</a>.</h2>
+</body>
+</html>

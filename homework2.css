@@ -1,0 +1,96 @@
+body {
+    background-color: yellow;
+}
+
+h1 {
+    color: red;
+    text-align: center;
+    margin-top: 8px;
+}
+
+h2 {
+    text-align: right;
+    color: blue;
+    font-style: italic;
+}
+
+h3 {
+    text-align: right;
+    color: red;
+}
+
+table {
+    border-spacing: 5px;
+    background-color: cyan;
+    animation: changecolor 10s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes changecolor {
+    from {
+        background-color: cyan;
+        color: black;
+    }    
+    to { 
+        background-color: green;
+        color: white;
+    }
+}
+
+td {
+    padding: 10px;
+}
+
+p::first-letter {
+    font-size: 3em;
+    font-weight: bold;
+    font-style: italic;
+}
+
+span {
+    font-size: 1em;
+    color: red; 
+}
+
+
+#second {
+    font-size: 3em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+th {
+    text-align: center;
+    font-weight: bold;
+}
+
+a:visited {
+    color: blue;
+}
+
+a:link {
+    color: red;
+}
+
+div {
+    border-spacing: 2px;
+    padding: 2px;
+    background-color: lightcyan;
+    animation: mymove 10s infinite;
+    position: relative;
+    width: 78px;
+}
+
+/* couldn't get banner to go to maximum possible right side without having banner disappear on narrower window; still need work on correcting sliding banner */
+
+@keyframes mymove {
+    0% {
+        left: 0%;
+    }    
+    50% { 
+        left: 84%;
+    }
+    100% {
+        left: 0%;
+    }
+}
