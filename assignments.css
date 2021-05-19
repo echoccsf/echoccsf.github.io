@@ -42,6 +42,7 @@ body {
 
 li {
     list-style-type: none;
+    padding: 8px 0 8px 0;
 }
 
 a:link {
