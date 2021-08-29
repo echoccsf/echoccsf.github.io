@@ -8,6 +8,6 @@ img {
     margin-right: auto;
 }
 
-a::after {
+/* a::after {
     content: url("browser.png");
-}
+} */
