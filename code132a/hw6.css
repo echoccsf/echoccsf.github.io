@@ -29,7 +29,7 @@ animation-iteration-count: infinite;
     100% { text-align: center; font-size: 32px; }
 }
 
-footer {
+.slogan {
     text-align: center;
     animation-name: fslogan;
     animation-duration: 3s;
@@ -41,4 +41,9 @@ h1 {
     text-align: center;
     background-color: #8EC1DA;
     margin: 0;
+}
+
+
+.home {
+    text-align: center;
 }
