@@ -13,6 +13,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="index.css">
+
+            <script>
+            function myFunction() 
+            {
+                var number1, number2, number3, n1, n2, n3, sum, average, product, largest, smallest;
+
+                number1 = document.forms["thisForm"].elements["num1"].value;
+
+                number2 = document.forms["thisForm"].elements["num2"].value;
+
+                number3 = document.forms["thisForm"].elements["num3"].value;
+
+                n1 = parseInt(number1);
+                n2 = parseInt(number2);
+                n3 = parseInt(number3);
+                sum = n1 + n2 + n3;
+                average = (n1 + n2 + n3)/3;
+                product = n1 * n2 * n3;
+                largest = Math.max(n1, n2, n3);
+                smallest = Math.min(n1, n2, n3);
+                document.forms["thisForm"].elements["result1"].value = sum;
+                document.forms["thisForm"].elements["result2"].value = average;
+                document.forms["thisForm"].elements["result3"].value = product;
+                document.forms["thisForm"].elements["result4"].value = largest;
+                document.forms["thisForm"].elements["result5"].value = smallest;
+            }
+        </script>
 </head>
 
 <body>
@@ -24,29 +51,55 @@
 
     <main>
 
-        <form>
-        <input id="number1" type="number">
-        <input id="number2" type="number">
-        <input id="number3" type="number">
+        <form name="thisForm">
 
-        <button type="button"
-        onclick="myFunction()">Submit</button>
+        <table>
+            <tr>
+            <td><label for="num1">First Number:</label></td>
+            <td><input type="text" name="num1" id="num1" size="10"></td>
+            </tr>
+            
+            <tr>
+            <td><label for="num2">Second Number:</label></td>
+            <td><input type="text" name="num2" id="num2" size="10"></td>
+            </tr>
+            
+            <tr>
+            <td><label for="num3">Third Number:</label></td>
+            <td><input type="text" name="num3" id="num3" size="10"></td>
+            </tr>
 
-        <button type="reset"
-        onreset="myFunction()">Reset</button>
+            <tr>
+            <td>Sum is:</td>
+            <td><input type="text" name="result1" size="10" readonly></td>
+            </tr>
 
-        <script>
-            function myFunction() {
-            //     var x = document.createElement("TEXTAREA");
-            //     var t = document.createTextNode("Numbers");
-            //     x.appendChild(t);
-            //     document.body.appendChild(x);
-                var w = document.getElementById("number1").value;
-                var x = document.getElementById("number2").value;
-                var y = document.getElementById("number3").value;
-            }
+            <tr>
+            <td>Average is:</td>
+            <td><input type="text" name="result2" size="10" readonly></td>
+            </tr>
 
-        </script>
+            <tr>
+            <td>Product is:</td>
+            <td><input type="text" name="result3" size="10" readonly></td>
+            </tr>
+
+            <tr>
+            <td>Largest Number is:</td>
+            <td><input type="text" name="result4" size="10" readonly></td>
+            </tr>
+
+            <tr>
+            <td>Smallest Number is:</td>
+            <td><input type="text" name="result5" size="10" readonly></td>
+            </tr>
+            
+            </table>
+            <br><br>
+            
+            <input type="button" onclick="myFunction()" value="SUBMIT">
+            <input type="reset" value="RESET">
+
         </form>
 
         <p><a href="hw2part1.html">JavaScript Text</a> - Displaying Text Using JavaScript</p>
