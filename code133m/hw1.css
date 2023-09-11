@@ -8,8 +8,6 @@ img {
     float: left;
 }
 
-.clearfix::after {
-    content: "";
+.clearfix {
     clear: both;
-    display: table;
 }

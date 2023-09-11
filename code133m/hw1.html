@@ -13,6 +13,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="hw1.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+          $("button").click(function(){
+            $("h1").animate({"font-size": "+=1rem"}, 3000);
+            $("h1").animate({"font-size": "-=1rem"}, 3000);
+            $("h1").css({"color": "red"});
+            $("img").css({"border": "solid 5px black"}); 
+            var timer = setTimeout(function() {$("h1").css("color", "black")}, 6000);
+          });
+        });
+    </script>
 </head>
 
 <body>
@@ -24,7 +38,8 @@
    
     <main>
 
-        <p class="clearfix">
+        
+        <p>
             <img src="emery-photo.jpg" alt="photo of emery">
         
             My name is Emery Cho. I was born and raised in San Francisco. I currently deliver
@@ -34,7 +49,7 @@
             of web development.
         </p>
          
-        <p>
+        <p class="clearfix">
             As mentioned above, one of my reasons to take this course is to review and get a
             refresher of what I've already learned in the coding bootcamp. Another reason to
             take this class is to see if web development is a good potential career for me.
@@ -45,29 +60,35 @@
             and technology.
         </p>
         
-        <h2>Technologies for this class</h2>
+        <article>
+            <h2>Technologies for this class</h2>
 
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-        </ul>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+        </article>
 
-        <h2>Reseources</h2>
+        <article>
+            <h2>Resources</h2>
 
-        <ul>
-            <li>
-                <a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a> - This website gives many
-                simple code tutorials with interactive examples. 
-            </li>
-            <li>
-                <a href="https://developer.mozilla.org/en-US/" target="_blank" rel="noopener noreferrer">MDN</a> - This website is
-                another valuable resource for web developers operated by Mozilla, the
-                developer for the Firefox web browser. The content is a bit more
-                complex, but it's also more comprehensive.
-            </li>
-        </ul>
+            <ul>
+                <li>
+                    <a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a> - This website gives many
+                    simple code tutorials with interactive examples. 
+                </li>
+                <li>
+                    <a href="https://developer.mozilla.org/en-US/" target="_blank" rel="noopener noreferrer">MDN</a> - This website is
+                    another valuable resource for web developers operated by Mozilla, the
+                    developer for the Firefox web browser. The content is a bit more
+                    complex, but it's also more comprehensive.
+                </li>
+            </ul>
+        </article>
     
+        <button>Start the action</button>
+
     </main>
 </body>
 
