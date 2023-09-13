@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>HTML and CSS Introduction</title>
+    
+    <meta name="description" content="HTML and CSS Introduction Page">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="hw1.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+          $("button").click(function(){
+            $("h1").animate({"font-size": "+=1rem"}, 3000);
+            $("h1").animate({"font-size": "-=1rem"}, 3000);
+            $("h1").css({"color": "red"});
+            $("img").css({"border": "solid 5px black"}); 
+            var timer = setTimeout(function() {$("h1").css("color", "black")}, 6000);
+          });
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+
+        <h1>HTML and CSS Introduction</h1>
+    
+    </header>
+   
+    <main>
+
+        
+        <p>
+            <img src="emery-photo.jpg" alt="photo of emery">
+        
+            My name is Emery Cho. I was born and raised in San Francisco. I currently deliver
+            for the post office. I've been taking various courses in web development and 
+            in computer networking on and off since 2016. I have previously attended a coding
+            bootcamp for web development, but it's been a few years since doing a good amount
+            of web development.
+        </p>
+         
+        <p class="clearfix">
+            As mentioned above, one of my reasons to take this course is to review and get a
+            refresher of what I've already learned in the coding bootcamp. Another reason to
+            take this class is to see if web development is a good potential career for me.
+            I also have a fascination about technology, so I would also like to get into
+            something that I also enjoy, even though careers in general are far from easy.
+            Because of this, I'm also taking other networking and IT courses in CCSF. I hope
+            to learn more about web development and anything else that deals with computers
+            and technology.
+        </p>
+        
+        <article>
+            <h2>Technologies for this class</h2>
+
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+        </article>
+
+        <article>
+            <h2>Resources</h2>
+
+            <ul>
+                <li>
+                    <a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a> - This website gives many
+                    simple code tutorials with interactive examples. 
+                </li>
+                <li>
+                    <a href="https://developer.mozilla.org/en-US/" target="_blank" rel="noopener noreferrer">MDN</a> - This website is
+                    another valuable resource for web developers operated by Mozilla, the
+                    developer for the Firefox web browser. The content is a bit more
+                    complex, but it's also more comprehensive.
+                </li>
+            </ul>
+        </article>
+    
+        <button>Start the action</button>
+
+    </main>
+</body>
+
+</html>

@@ -14,32 +14,66 @@
     
     <link rel="stylesheet" href="index.css">
 
-            <script>
-            function myFunction() 
-            {
-                var number1, number2, number3, n1, n2, n3, sum, average, product, largest, smallest;
+    <link rel="stylesheet" href="hw2part2.css">
 
-                number1 = document.forms["thisForm"].elements["num1"].value;
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
-                number2 = document.forms["thisForm"].elements["num2"].value;
+    <script>     
+        function process()
 
-                number3 = document.forms["thisForm"].elements["num3"].value;
+        {	
 
-                n1 = parseInt(number1);
-                n2 = parseInt(number2);
-                n3 = parseInt(number3);
-                sum = n1 + n2 + n3;
-                average = (n1 + n2 + n3)/3;
-                product = n1 * n2 * n3;
-                largest = Math.max(n1, n2, n3);
-                smallest = Math.min(n1, n2, n3);
-                document.forms["thisForm"].elements["result1"].value = sum;
-                document.forms["thisForm"].elements["result2"].value = average;
-                document.forms["thisForm"].elements["result3"].value = product;
-                document.forms["thisForm"].elements["result4"].value = largest;
-                document.forms["thisForm"].elements["result5"].value = smallest;
+        var number1, number2, number3;
+
+        var errMsg = "<span style='font-weight: bold; color: red; font-size: 1.5em;'>The input is invalid. It is not a number</span>";
+
+        number1 = document.getElementById("num1").value;
+   
+        number2 = document.getElementById("num2").value;
+    
+        number3 = document.getElementById("num3").value;
+
+        n1 = parseInt(number1);
+        n2 = parseInt(number2);
+        n3 = parseInt(number3);
+
+        sum = n1 + n2 + n3;
+        average = (n1 + n2 + n3)/3;
+        product = n1 * n2 * n3;
+        max = Math.max(n1, n2, n3);
+        min = Math.min(n1, n2, n3);
+
+        if ( Number.isNaN(n1, n2, n3) || (n1 && !n2 && !n3) || (!n1 && n2 && !n3) || (!n1 && !n2 && n3) || (n1 && n2 && !n3) || (n1 && !n2 && n3) || (!n1 && n2 && n3)) {
+            document.getElementById("result").value = ("This form needs to have all numbers inputted.")
             }
-        </script>
+        else {
+            document.getElementById("result").value = ("The sum of the numbers were " + sum + ", " + 
+            "\nThe average of the integers was " + average + ", " + 
+            "\nThe product of the integers was " + product + ", " +
+            "\nThe largest of the integers was " + max + ", " + 
+            "\nThe smallest of the integers was " + min + ".");
+            document.getElementById("error").innerHTML = "";
+            }
+
+        }
+
+        $(document).ready(function(){
+            $(".fade").click(function(){
+                $("textarea").fadeTo("slow",0.25);
+            });
+            $(".submit").click(function(){
+                $("textarea").fadeTo("slow",1);
+            });
+            $(".reset").click(function(){
+                $("textarea").fadeTo("slow",1);
+            });
+        });
+
+        function res() {
+           document.getElementById("result").innerHTML = "";
+		   document.getElementById("error").innerHTML = "";
+        }
+    </script> 
 </head>
 
 <body>
@@ -51,55 +85,37 @@
 
     <main>
 
-        <form name="thisForm">
+        <form id="myform" name="myform">
 
-        <table>
+            <table>
             <tr>
-            <td><label for="num1">First Number:</label></td>
-            <td><input type="text" name="num1" id="num1" size="10"></td>
+            
+            <td>First Number:</td> 
+            <td><input type="text" id="num1" autofocus></td>
+            
+            <td>Second Number:</td> 
+            <td><input type="text" id="num2"></td>
+            
             </tr>
             
             <tr>
-            <td><label for="num2">Second Number:</label></td>
-            <td><input type="text" name="num2" id="num2" size="10"></td>
-            </tr>
             
-            <tr>
-            <td><label for="num3">Third Number:</label></td>
-            <td><input type="text" name="num3" id="num3" size="10"></td>
-            </tr>
-
-            <tr>
-            <td>Sum is:</td>
-            <td><input type="text" name="result1" size="10" readonly></td>
-            </tr>
-
-            <tr>
-            <td>Average is:</td>
-            <td><input type="text" name="result2" size="10" readonly></td>
-            </tr>
-
-            <tr>
-            <td>Product is:</td>
-            <td><input type="text" name="result3" size="10" readonly></td>
-            </tr>
-
-            <tr>
-            <td>Largest Number is:</td>
-            <td><input type="text" name="result4" size="10" readonly></td>
-            </tr>
-
-            <tr>
-            <td>Smallest Number is:</td>
-            <td><input type="text" name="result5" size="10" readonly></td>
-            </tr>
+            <td>Third Number:</td>  
+            <td><input type="text" id="num3"></td>
             
+            </tr>
             </table>
-            <br><br>
             
-            <input type="button" onclick="myFunction()" value="SUBMIT">
-            <input type="reset" value="RESET">
+            <br>
+            
+            Results: <textarea rows="6" cols="40" id="result" readonly></textarea><br><br>
+            
+            <input type="button"  class="submit" onclick="process()" value="SUBMIT">
+            
+            <input type="reset" value="RESET" class="reset" onclick="res()"><br><br>
 
+            <button type="button" class="fade">Click to fade results</button>
+            
         </form>
 
         <p><a href="hw2part1.html">JavaScript Text</a> - Displaying Text Using JavaScript</p>
