@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+  <title>ABC Toys</title>
+
+</head>
+
+<body>
+
+<header class="container-fluid">
+  <h1>Products of ABC Toys</h1>
+</header>
+
+<nav class="navbar fixed-bottom justify-content-center navbar-expand-sm navbar-dark bg-success">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="products.html">Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="location.html">Location</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="extra.html">Extra</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<article class="container-fluid">
+  <h5>Below are some of the toys we sell. Click each category below to show or hide each product.</h5>
+  <div id="accordion">
+    <div class="card">
+      <div class="card-header">
+        <a class="btn" data-bs-toggle="collapse" href="#product1">Teddy Bears and Stuffed Animals</a>
+      </div>
+      <div id="product1" class="collapse" data-bs-parent="#accordion">
+        <div class="card-body">
+          <img class="float-start" src="teddy-bear.png" alt="Teddy Bear" style="max-width:20%; height:auto">
+          <p>We have many different sizes of teddy bears and other stuffed animals. They are good to help your child sleep without being frightened at night.</p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <a class="btn" data-bs-toggle="collapse" href="#product2">Rubik's Cubes and Puzzles</a>
+      </div>
+      <div id="product2" class="collapse" data-bs-parent="#accordion">
+        <div class="card-body">
+          <img class="float-start" src="rubiks-cube.png" alt="Rubik's Cube" style="max-width:20%; height:auto">
+          <p>Whenever you crave a bit of a mental workout, we have Rubik's cubes and other puzzles for any age.</p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <a class="btn" data-bs-toggle="collapse" href="#product3">Toy Cars</a>
+      </div>
+      <div id="product3" class="collapse" data-bs-parent="#accordion">
+        <div class="card-body">
+          <img class="float-start" src="toy-car.png" alt="Toy Car" style="max-width:25%; height:auto">
+          <p>We sell many toy cars. They can be raced like Hot Wheels, and they can make the perfect item to start your own toy car collection.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+</body>
+
+</html>
