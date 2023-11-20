@@ -18,5 +18,5 @@
     "background_color": "#f0f0f0",
     "theme_color": "#ffffff",
     "display": "standalone",
-    "scope": "/app/"
+    "scope": "https://echoccsf.github.io/code133m/"
 }
