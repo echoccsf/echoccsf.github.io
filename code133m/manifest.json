@@ -1,0 +1,22 @@
+{
+    "short_name": "PWA Intro",
+    "name": "Introduction to PWAs",
+    "description": "Basic PWA Page",
+    "icons": [
+        {
+            "src": "go-128.png",
+            "type": "image/png",
+            "sizes": "128x128"
+        },
+        {
+            "src": "go-512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],   
+    "start_url": "index.html",
+    "background_color": "#f0f0f0",
+    "theme_color": "#ffffff",
+    "display": "standalone",
+    "scope": "/app/"
+}
