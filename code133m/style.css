@@ -7,8 +7,6 @@ button {
     margin: 0.5em 0;
 }
 
-.show {display:block;}
-
 @media only screen and (max-width: 44em) {
     button {
         width: 100%;
