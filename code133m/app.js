@@ -11,7 +11,3 @@ function lightBlue() {
 function lightGold() {
     document.body.style.backgroundImage = "url('lightgold.jpg')";
 }
-
-function resetBackground() {
-    document.body.style.backgroundImage = "none";
-}
