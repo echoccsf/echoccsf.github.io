@@ -1,5 +1,5 @@
 if('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('serviceworker.js')
+    navigator.serviceWorker.register('serviceworker-hw4.js')
         .then((reg) => console.log('Service worker registered', reg))
         .catch((err) => console.log('Service worker not registered', err));
 }
