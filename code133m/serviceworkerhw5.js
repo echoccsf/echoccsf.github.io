@@ -6,7 +6,7 @@ const addResourcesToCache = async (resources) => {
 self.addEventListener("install", event => {
     event.waitUntil(
         addResourcesToCache([
-            "indexhw5.html",
+            "index-hw5.html",
             "stylehw5.css"
         ]),
     );
