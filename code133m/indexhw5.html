@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hybrid Application Comparison</title>
+        <link rel="stylesheet" href="stylehw5.css">
+        <script>
+            if('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('serviceworkerhw5.js')
+                    .then((reg) => console.log('Service worker registered', reg))
+                    .catch((err) => console.log('Service worker not registered', err));
+            }       
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>Hybrid Application Comparison</h1>
+        </header>
+        <main>
+            <div class="comparison-card">
+                <h2>Cordova</h2>
+                <p>Open-source version of the former PhoneGap app development framework</p>
+                <ul>
+                    <li>Pros:
+                        <ul>
+                            <li>Ease of use</li>
+                            <li>Support for multiple platforms</li>
+                            <li>Code can be shared with web version</li>
+                        </ul>
+                    </li>
+                    <li>Cons:
+                        <ul>
+                            <li>Difficult to debug compared to native apps</li>
+                            <li>Might not support heavy graphics integration</li>
+                            <li>Limited backward compatiblity</li>
+                        </ul>
+                    </li>
+                </ul>
+                <a href="https://mobisoftinfotech.com/resources/blog/cordova-vs-react-native-comparison/#:~:text=1%20Apps%20built%20with%20Cordova%20may%20sometimes%20show,deal%20with%20version%20conflicts%20for%20the%20newer%20codebase."
+                target="_blank" rel="noopener noreferrer">Learn More about Cordova</a>
+            </div>
+            <div class="comparison-card">
+                <h2>Flutter</h2>
+                <p>UI Software Development Kit by Google</p>
+                <ul>
+                    <li>Pros:
+                        <ul>
+                            <li>More cost effective</li>
+                            <li>Cross-platform code usability</li>
+                            <li>One of the more suported mobile frameworks</li>
+                        </ul>
+                    </li>
+                    <li>Cons:
+                        <ul>
+                            <li>New platform-specific features not immediately avilable</li>
+                            <li>Difficulty in providing for platform-specific interfaces</li>
+                            <li>Limited libraries to use</li>
+                        </ul>
+                    </li>
+                </ul>
+                <a href="https://www.ailoitte.com/blog/flutter-advantages-and-disadvantages/"
+                target="_blank" rel="noopener noreferrer">Learn More about Flutter</a>
+            </div>
+            <div class="comparison-card">
+                <h2>React Native</h2>
+                <p>PhoneGap is a mobile app development framework by Adobe.</p>
+                <ul>
+                    <li>Pros:
+                        <ul>
+                            <li>Compatible with 3rd-party plugins</li>
+                            <li>Smoother and faster UI</li>
+                            <li>Easier access to experts</li>
+                        </ul>
+                    </li>
+                    <li>Cons:
+                        <ul>
+                            <li>More tedious to troubleshoot</li>
+                            <li>Not as efficient when using complex animations</li>
+                            <li>More difficult to update</li>
+                        </ul>
+                    </li>
+                </ul>
+                <a href="https://pagepro.co/blog/react-native-pros-and-cons/" 
+                target="_blank" rel="noopener noreferrer">Learn More about React Native</a>
+            </div>
+        </main>
+    </body>
+</html>
